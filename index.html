@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hai Icha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animated.css">
+</head>
+<body background="night.jpg">
+    <div id="clock">
+    </div>
+    <br>
+    <div class="ucapan">
+        <input type="image" src="logo.png" onclick="typeWriter()" width = "20">
+        <br>
+        <p id="demo"></p>
+    </div>
+          <script type="text/javascript">
+            <!--
+            function showTime() {
+                var a_p = "";
+                var today = new Date();
+                var curr_hour = today.getHours();
+                var curr_minute = today.getMinutes();
+                var curr_second = today.getSeconds();
+                if (curr_hour < 12) {
+                    a_p = "AM";
+                } else {
+                    a_p = "PM";
+                }
+                if(curr_hour >= 0 && curr_hour <=10){
+                    ucapan="Selamat Pagi Icha .... "
+                }
+                else if(curr_hour >10  && curr_hour <= 15){
+                    ucapan="Selamat Siang Icha .... "
+                }
+                else if(curr_hour > 15 && curr_hour <= 18){
+                    ucapan = "Selamat Sore Icha ... "
+                }else{
+                    ucapan = "Selamat Malam Icha ..."
+                }
+                if (curr_hour == 0) {
+                    curr_hour = 12;
+                }
+                if (curr_hour > 12) {
+                    curr_hour = curr_hour - 12;
+                }
+                curr_hour = checkTime(curr_hour);
+                curr_minute = checkTime(curr_minute);
+                curr_second = checkTime(curr_second);
+                document.getElementById('clock').innerHTML=
+                curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p ;
+                }
+     
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+            setInterval(showTime, 500);
+            </script>   
+        <script>    
+        var i = 0;
+        var speed = 100;
+        function typeWriter() {
+          if (i < ucapan.length) {
+            document.getElementById("demo").innerHTML += ucapan.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+    </script>
+
+</body>
+</html>
